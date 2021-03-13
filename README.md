@@ -1,6 +1,8 @@
 <a href="https://lb123658.github.io/acornLanguage/" target="_blank">
 <img src="images/acornLogo.png" width="60%" /></a><br>
-Coming soon: a coding language that lets you make colorful pictures and text.
+# The coding language that lets you make colorful pictures.
 <br>
-<a href="https://lb123658.github.io/acornLanguage/">Start learning it today</a> <br>
-<a href="https://lb123658.github.io/acornLanguage/images/face.png">See what Acorn can do</a>
+## Acorn version 1.0
+#### The new version now includes a features that automatically generates HTML from the Acorn code. 
+#### Now you can code in Acorn and see the results in HTML
+<a href="https://github.com/LB123658/acornLanguage/archive/main.zip">Download compiler</a>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <a href="https://lb123658.github.io/acornLanguage/">Acorn homepage</a>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<a href="https://lb123658.github.io/acornLanguage/about">About Acorn</a>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<a href="https://lb123658.github.io/acornLanguage/editor">Web version</a>
