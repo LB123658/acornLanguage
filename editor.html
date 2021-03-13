@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -348,6 +346,26 @@ background: lightgrey;
 color: #282828;
 cursor: pointer;
 }
+
+
+#htmlWindow {
+background: #282828;
+height: 60%;
+min-width: 60%;
+position: fixed;
+top: 20%;
+left: 20%;
+border-radius: 15px;
+visibility: hidden;
+}
+#htmlSource {
+color: #fff000;
+position: absolute;
+width: 90%;
+left: 5%;
+font-family: courier new;
+font-size: 10px;
+}
 </style>
 </head>
 <body>
@@ -422,8 +440,8 @@ end program::
 
 
 <button id="topFile">▸ Files</button>
-<button id="secondFile">file.acorn</button>
-<button id="thirdFile">file.html</button>
+<button id="secondFile" onclick="hideHtml()">file.acorn</button>
+<button id="thirdFile" onclick="generateHtml(); writeIt()">file.html</button>
 
 
 <p id="acornLogo">Acorn code editor</p>
@@ -436,6 +454,11 @@ end program::
 <button id="home" title="Home">Home</button></a>
 
 <img src="" id="acornFoto" />
+
+<div id="htmlWindow">
+<p id="htmlSource"></p>
+</div>
+
 <script>
 function nameChange() {
 var x = document.getElementById("titleInput");
@@ -496,6 +519,19 @@ document.getElementById("fifteen").style.background = pixel15.value;
 function sixteenColor() {
 document.getElementById("sixteen").style.background = pixel16.value;
 }
+function generateHtml() {
+document.getElementById("htmlWindow").style.visibility = "visible";
+alert("Showing HTML file generated for your picture.");
+}
+function hideHtml() {
+document.getElementById("htmlWindow").style.visibility = "hidden";
+}
+
+
+function writeIt() {
+document.getElementById("htmlSource").innerHTML = "&#x3C;button style=&#x22;height: 25%; width: 25%; border: none; position: absolute; top: 0px; left: 0px; background:" + pixel1.value + ";&#x22;&#x3e;&#x3C;/button&#x3e; &#x3C;button style=&#x22;height: 25%; width: 25%; border: none; position: absolute; top: 0px; left: 25%; background:" + pixel2.value + ";&#x22;&#x3e;&#x3C;/button&#x3e; &#x3C;button style=&#x22;height: 25%; width: 25%; border: none; position: absolute; top: 0px; left: 50%; background:" + pixel3.value + ";&#x22;&#x3e;&#x3C;/button&#x3e; &#x3C;button style=&#x22;height: 25%; width: 25%; border: none; position: absolute; top: 0px; left: 75%; background:" + pixel4.value + ";&#x22;&#x3e;&#x3C;/button&#x3e; &#x3C;button style=&#x22;height: 25%; width: 25%; border: none; position: absolute; top: 25%; left: 0px; background:" + pixel5.value + ";&#x22;&#x3e;&#x3C;/button&#x3e; &#x3C;button style=&#x22;height: 25%; width: 25%; border: none; position: absolute; top: 25%; left: 25%; background:" + pixel6.value + ";&#x22;&#x3e;&#x3C;/button&#x3e; &#x3C;button style=&#x22;height: 25%; width: 25%; border: none; position: absolute; top: 25%; left: 50%; background:" + pixel7.value + ";&#x22;&#x3e;&#x3C;/button&#x3e; &#x3C;button style=&#x22;height: 25%; width: 25%; border: none; position: absolute; top: 25%; left: 75%; background:" + pixel8.value + ";&#x22;&#x3e;&#x3C;/button&#x3e; &#x3C;button style=&#x22;height: 25%; width: 25%; border: none; position: absolute; top: 50%; left: 0px; background:" + pixel9.value + ";&#x22;&#x3e;&#x3C;/button&#x3e; &#x3C;button style=&#x22;height: 25%; width: 25%; border: none; position: absolute; top: 50%; left: 25%; background:" + pixel10.value + ";&#x22;&#x3e;&#x3C;/button&#x3e; &#x3C;button style=&#x22;height: 25%; width: 25%; border: none; position: absolute; top: 50%; left: 50%; background:" + pixel11.value + ";&#x22;&#x3e;&#x3C;/button&#x3e; &#x3C;button style=&#x22;height: 25%; width: 25%; border: none; position: absolute; top: 50%; left: 75%; background:" + pixel12.value + ";&#x22;&#x3e;&#x3C;/button&#x3e; &#x3C;button style=&#x22;height: 25%; width: 25%; border: none; position: absolute; top: 75%; left: 0px; background:" + pixel13.value + ";&#x22;&#x3e;&#x3C;/button&#x3e; &#x3C;button style=&#x22;height: 25%; width: 25%; border: none; position: absolute; top: 75%; left: 25%; background:" + pixel14.value + ";&#x22;&#x3e;&#x3C;/button&#x3e; &#x3C;button style=&#x22;height: 25%; width: 25%; border: none; position: absolute; top: 75%; left: 50%; background:" + pixel15.value + ";&#x22;&#x3e;&#x3C;/button&#x3e; &#x3C;button style=&#x22;height: 25%; width: 25%; border: none; position: absolute; top: 75%; left: 75%; background:" + pixel16.value + ";&#x22;&#x3e;&#x3C;/button&#x3e;";
+}
 </script>
+
 </body>
 </html>
