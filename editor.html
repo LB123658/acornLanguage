@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -109,24 +110,50 @@ right: 140px;
 background: black;
 position: absolute;
 top: 70px;
-left: 10px;
-width: 300px;
+left: 210px;
+width: 400px;
 font-family: 'Fira Mono', monospace;
 }
 #titleInput {
 background: black;
 position: absolute;
 top: 87px;
-left: 140px;
-width: 100px;
+left: 340px;
+width: 130px;
 font-family: 'Fira Mono', monospace;
 border: none;
 z-index: 1;
 }
+#program {
+position: absolute;
+top: 110px;
+left: 380px;
+z-index: 1;
+background: transparent;
+border: none;
+font-family: 'Fira Mono', monospace;
+}
+#fot {
+position: absolute;
+top: 0px;
+left: 0px;
+width: 610px;
+z-index: -1;
+height: 100%;
+background: black;
+}
+#acornLogo {
+position: absolute;
+top: 0px;
+left: 40px;
+font-size: 30px;
+color: grey;
+font-family: 'Fira Mono', monospace;
+}
 </style>
 </head>
 <body>
-
+<div id="canvas">
 <button class="pixel" id="one"></button>
 <button class="pixel" id="two"></button>
 <button class="pixel" id="three"></button>
@@ -146,15 +173,49 @@ z-index: 1;
 <button class="pixel" id="fourteen"></button>
 <button class="pixel" id="fifteen"></button>
 <button class="pixel" id="sixteen"></button>
+</div>
 
+<select id="program" onchange="programGo()">
+  <option value="Error! undefined program"></option>
+  <option value="started program::drawing">drawing</option>
+  <option value="Error! undefined program">other</option>
+</select>
+
+<div id="fot">
 <input type="text" id="titleInput" onkeyup="nameChange()">
-<p id="code">file.acorn { &#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &#xA0;&#xA0;}</p>
+<p id="code">file.acorn { &#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;}<br>start program::<br>
+pixel1 ==<br>
+pixel2 ==<br>
+pixel3 ==<br>
+pixel4 ==<br>
+pixel5 ==<br>
+pixel6 ==<br>
+pixel7 ==<br>
+pixel8 ==<br>
+pixel9 ==<br>
+pixel10 ==<br>
+pixel11 ==<br>
+pixel12 ==<br>
+pixel13 ==<br>
+pixel14 ==<br>
+pixel15 ==<br>
+pixel16 ==<br>
+end program::
+</p>
 
+
+<p id="acornLogo">Acorn code editor</p>
+</div>
 <script>
 function nameChange() {
 var x = document.getElementById("titleInput");
 document.getElementById("myTitle").innerHTML = x.value;
 }
+function programGo() {
+var program = document.getElementById("program");
+alert(program.value);
+}
+
 </script>
 </body>
 </html>
