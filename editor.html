@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -303,6 +305,49 @@ border: none;
 left: 320px;
 z-index: 1;
 }
+#aboutA {
+top: 10px;
+right: 10px;
+height: 40px;
+width: 80px;
+border: 1px solid grey;
+border-radius: 7px;
+font-weight: normal;
+font-size: 20px;
+color: grey;
+position: absolute;
+top: 5px;
+right: 10px;
+font-family: 'Fira Mono', monospace;
+background: transparent;
+}
+#aboutA:hover {
+opacity: 0.8;
+background: lightgrey;
+color: #282828;
+cursor: pointer;
+}
+
+#home {
+height: 40px;
+width: 80px;
+border: 1px solid grey;
+border-radius: 7px;
+font-weight: normal;
+font-size: 20px;
+color: grey;
+position: absolute;
+top: 5px;
+right: 100px;
+font-family: 'Fira Mono', monospace;
+background: transparent;
+}
+#home:hover {
+opacity: 0.8;
+background: lightgrey;
+color: #282828;
+cursor: pointer;
+}
 </style>
 </head>
 <body>
@@ -383,6 +428,14 @@ end program::
 
 <p id="acornLogo">Acorn code editor</p>
 </div>
+
+<a href="about.html" target="_blank">
+<button id="aboutA" title="About Acorn coding language">About</button></a>
+
+<a href="index.html" target="_blank">
+<button id="home" title="Home">Home</button></a>
+
+<img src="" id="acornFoto" />
 <script>
 function nameChange() {
 var x = document.getElementById("titleInput");
