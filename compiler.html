@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='icon' href='images/favicon.png' type='image/png'/ >  
+<title id="myTitle">Acorn Compiler</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap" rel="stylesheet">
+<style>
+* {
+font-family: font-family: 'Fira Mono', monospace;
+color: #d7db2d;
+font-size: 18px;
+}
+.pixel {
+height: 20px;
+width: 20px;
+border: none;
+background: transparent;
+}
+#one {
+position: absolute;
+top: 200px;
+right: 200px;
+border: 1px solid red;
+}
+#two {
+position: absolute;
+top: 200px;
+right: 180px;
+}
+#three {
+position: absolute;
+top: 200px;
+right: 160px;
+}
+#four {
+position: absolute;
+top: 200px;
+right: 140px;
+}
+
+#five {
+position: absolute;
+top: 220px;
+right: 200px;
+border: 1px solid blue;
+}
+#six {
+position: absolute;
+top: 220px;
+right: 180px;
+}
+#seven {
+position: absolute;
+top: 220px;
+right: 160px;
+}
+#eight {
+position: absolute;
+top: 220px;
+right: 140px;
+}
+
+#nine {
+position: absolute;
+top: 240px;
+right: 200px;
+border: 1px solid green;
+}
+#ten {
+position: absolute;
+top: 240px;
+right: 180px;
+}
+#eleven {
+position: absolute;
+top: 240px;
+right: 160px;
+}
+#twelve {
+position: absolute;
+top: 240px;
+right: 140px;
+}
+
+#thirteen {
+position: absolute;
+top: 260px;
+right: 200px;
+border: 1px solid orange;
+}
+#fourteen {
+position: absolute;
+top: 260px;
+right: 180px;
+}
+#fifteen {
+position: absolute;
+top: 260px;
+right: 160px;
+}
+#sixteen {
+position: absolute;
+top: 260px;
+right: 140px;
+}
+#code {
+background: black;
+position: absolute;
+top: 70px;
+left: 10px;
+width: 300px;
+font-family: 'Fira Mono', monospace;
+}
+#titleInput {
+background: black;
+position: absolute;
+top: 87px;
+left: 140px;
+width: 100px;
+font-family: 'Fira Mono', monospace;
+border: none;
+z-index: 1;
+}
+</style>
+</head>
+<body>
+
+<button class="pixel" id="one"></button>
+<button class="pixel" id="two"></button>
+<button class="pixel" id="three"></button>
+<button class="pixel" id="four"></button>
+
+<button class="pixel" id="five"></button>
+<button class="pixel" id="six"></button>
+<button class="pixel" id="seven"></button>
+<button class="pixel" id="eight"></button>
+
+<button class="pixel" id="nine"></button>
+<button class="pixel" id="ten"></button>
+<button class="pixel" id="eleven"></button>
+<button class="pixel" id="twelve"></button>
+
+<button class="pixel" id="thirteen"></button>
+<button class="pixel" id="fourteen"></button>
+<button class="pixel" id="fifteen"></button>
+<button class="pixel" id="sixteen"></button>
+
+<input type="text" id="titleInput" onkeyup="nameChange()">
+<p id="code">file.acorn { &#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &#xA0;&#xA0;}</p>
+
+<script>
+function nameChange() {
+var x = document.getElementById("titleInput");
+document.getElementById("myTitle").innerHTML = x.innerHTML;
+}
+</script>
+</body>
+</html>
