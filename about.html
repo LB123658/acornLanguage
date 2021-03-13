@@ -1,0 +1,88 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='icon' href='images/favicon.png' type='image/png'/ >  
+<title id="myTitle">About Acorn</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap" rel="stylesheet">
+<style>
+* {
+font-family: 'Fira Mono', monospace;
+}
+#img {
+position: absolute;
+top: 0px;
+left: 5px;
+width: 90px;
+}
+#title {
+font-family: 'Fira Mono', monospace;
+color: white;
+font-size: 30px;
+position: absolute;
+top: 10px;
+left: 120px;
+cursor: default;
+width: 70%;
+}
+#nav {
+position: fixed;
+top: 0px;
+height: 120px;
+width: 100%;
+left: 0px;
+background: #58bd00;
+z-index: 1;
+}
+#tryIt {
+position: fixed; 
+top: 35px;
+right: 20px;
+height: 50px;
+width: 100px;
+border: white;
+border-radius: 25px;
+border: 2px solid white;
+color: white;
+background: transparent;
+font-size: 15px;
+cursor: pointer;
+z-index: 2;
+}
+#tryIt:hover {
+color: #58bd00;
+background: white;
+animation-name: example;
+  animation-duration: 0.9s;
+  animation-iteration-count: 1;
+}
+@keyframes example {
+ 
+  0% {background: transparent;}
+  100%   {background: white;}
+
+}
+#paragraph {
+position: absolute;
+top: 150px;
+left: 25%; 
+width: 50%;
+text-align: justify;
+font-size: 20px;
+color: grey;
+}
+</style>
+<body>
+<div id="nav">
+<img src="https://lb123658.github.io/acornLanguage/images/favicon.png" id="img" />
+<p id="title"><b>Acorn</b>, the new code to make designs.
+</div>
+<a href="editor.html">
+<button id="tryIt" title="Try the Acorn compiler">Try Acorn</button></a>
+<p id="paragraph">How Acorn works:<br><br>The Acorn coding language is based off of a 4 by 4 grid of 16 squares. Pixel1 is the top left square and pixel16 is the bottom right. The numbers increase left to right and go down the rows. <br><br>
+The code starts with "file.acorn { }" and the name of your file goes inside the brackets. You also need to select the program as "drawing". <br><br>Acorn version 1.0 will include a HTML file you can access built from the Acorn code that can be embedded in websites because Acorn does not work for that. Acorn is meant to be the easier coding language to learn.</p>
+</body>
+</html>
