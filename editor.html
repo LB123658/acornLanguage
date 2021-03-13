@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +22,6 @@ background: transparent;
 position: absolute;
 top: 200px;
 right: 200px;
-border: 1px solid red;
 }
 #two {
 position: absolute;
@@ -45,7 +43,6 @@ right: 140px;
 position: absolute;
 top: 220px;
 right: 200px;
-border: 1px solid blue;
 }
 #six {
 position: absolute;
@@ -67,7 +64,6 @@ right: 140px;
 position: absolute;
 top: 240px;
 right: 200px;
-border: 1px solid green;
 }
 #ten {
 position: absolute;
@@ -89,7 +85,6 @@ right: 140px;
 position: absolute;
 top: 260px;
 right: 200px;
-border: 1px solid orange;
 }
 #fourteen {
 position: absolute;
@@ -150,6 +145,164 @@ font-size: 30px;
 color: grey;
 font-family: 'Fira Mono', monospace;
 }
+#topFile {
+position: absolute;
+top: 100px;
+left: 0px;
+height: 30px;
+width: 150px;
+border: none;
+border-radius: 5px;
+background: grey;
+color: white;
+text-align: left;
+}
+#secondFile {
+position: absolute;
+top: 130px;
+left: 50px;
+height: 30px;
+width: 100px;
+border: none;
+border-radius: 5px;
+background: grey;
+color: white;
+text-align: left;
+}
+#thirdFile {
+position: absolute;
+top: 160px;
+left: 50px;
+height: 30px;
+width: 100px;
+border: none;
+border-radius: 5px;
+background: grey;
+color: white;
+text-align: left;
+}
+.userInput {
+background: black;
+width: 130px;
+font-family: 'Fira Mono', monospace;
+border: none;
+z-index: 1;
+}
+#pixel1 {
+position: absolute; 
+top: 130px;
+border: none;
+left: 320px;
+z-index: 1;
+}
+#pixel2 {
+position: absolute; 
+top: 153px;
+border: none;
+left: 320px;
+z-index: 1;
+}
+#pixel3 {
+position: absolute; 
+top: 176px;
+border: none;
+left: 320px;
+z-index: 1;
+}
+#pixel4 {
+position: absolute; 
+top: 199px;
+border: none;
+left: 320px;
+z-index: 1;
+}
+
+#pixel5 {
+position: absolute; 
+top: 222px;
+border: none;
+left: 320px;
+z-index: 1;
+}
+#pixel6 {
+position: absolute; 
+top: 240px;
+border: none;
+left: 320px;
+z-index: 1;
+}
+#pixel7 {
+position: absolute; 
+top: 263px;
+border: none;
+left: 320px;
+z-index: 1;
+}
+#pixel8 {
+position: absolute; 
+top: 286px;
+border: none;
+left: 320px;
+z-index: 1;
+}
+
+#pixel9 {
+position: absolute; 
+top: 306px;
+border: none;
+left: 320px;
+z-index: 1;
+}
+#pixel10 {
+position: absolute; 
+top: 330px;
+border: none;
+left: 320px;
+z-index: 1;
+}
+#pixel11 {
+position: absolute; 
+top: 351px;
+border: none;
+left: 320px;
+z-index: 1;
+}
+#pixel12 {
+position: absolute; 
+top: 373px;
+border: none;
+left: 320px;
+z-index: 1;
+}
+
+#pixel13 {
+position: absolute; 
+top: 394px;
+border: none;
+left: 320px;
+z-index: 1;
+}
+#pixel14 {
+position: absolute; 
+top: 415px;
+border: none;
+left: 320px;
+z-index: 1;
+}
+#pixel15 {
+position: absolute; 
+top: 437px;
+border: none;
+left: 320px;
+z-index: 1;
+}
+#pixel16 {
+position: absolute; 
+top: 458px;
+border: none;
+left: 320px;
+z-index: 1;
+}
 </style>
 </head>
 <body>
@@ -202,6 +355,30 @@ pixel15 ==<br>
 pixel16 ==<br>
 end program::
 </p>
+<input class="userInput" id="pixel1" onkeyup="oneColor()">
+<input class="userInput" id="pixel2" onkeyup="twoColor()">
+<input class="userInput" id="pixel3" onkeyup="threeColor()">
+<input class="userInput" id="pixel4" onkeyup="fourColor()">
+
+<input class="userInput" id="pixel5" onkeyup="fiveColor()">
+<input class="userInput" id="pixel6" onkeyup="sixColor()">
+<input class="userInput" id="pixel7" onkeyup="sevenColor()">
+<input class="userInput" id="pixel8" onkeyup="eightColor()">
+
+<input class="userInput" id="pixel9" onkeyup="nineColor()">
+<input class="userInput" id="pixel10" onkeyup="tenColor()">
+<input class="userInput" id="pixel11" onkeyup="elevenColor()">
+<input class="userInput" id="pixel12" onkeyup="twelveColor()">
+
+<input class="userInput" id="pixel13" onkeyup="thirteenColor()">
+<input class="userInput" id="pixel14" onkeyup="fourteenColor()">
+<input class="userInput" id="pixel15" onkeyup="fifteenColor()">
+<input class="userInput" id="pixel16" onkeyup="sixteenColor()">
+
+
+<button id="topFile">▸ Files</button>
+<button id="secondFile">file.acorn</button>
+<button id="thirdFile">file.html</button>
 
 
 <p id="acornLogo">Acorn code editor</p>
@@ -215,7 +392,57 @@ function programGo() {
 var program = document.getElementById("program");
 alert(program.value);
 }
+function oneColor() {
+document.getElementById("one").style.background = pixel1.value;
+}
+function twoColor() {
+document.getElementById("two").style.background = pixel2.value;
+}
+function threeColor() {
+document.getElementById("three").style.background = pixel3.value;
+}
+function fourColor() {
+document.getElementById("four").style.background = pixel4.value;
+}
 
+function fiveColor() {
+document.getElementById("five").style.background = pixel5.value;
+}
+function sixColor() {
+document.getElementById("six").style.background = pixel6.value;
+}
+function sevenColor() {
+document.getElementById("seven").style.background = pixel7.value;
+}
+function eightColor() {
+document.getElementById("eight").style.background = pixel8.value;
+}
+
+function nineColor() {
+document.getElementById("nine").style.background = pixel9.value;
+}
+function tenColor() {
+document.getElementById("ten").style.background = pixel10.value;
+}
+function elevenColor() {
+document.getElementById("eleven").style.background = pixel11.value;
+}
+function twelveColor() {
+document.getElementById("twelve").style.background = pixel12.value;
+}
+
+function thirteenColor() {
+document.getElementById("thirteen").style.background = pixel13.value;
+}
+function fourteenColor() {
+document.getElementById("fourteen").style.background = pixel14.value;
+}
+function fifteenColor() {
+document.getElementById("fifteen").style.background = pixel15.value;
+}
+function sixteenColor() {
+document.getElementById("sixteen").style.background = pixel16.value;
+}
 </script>
 </body>
 </html>
