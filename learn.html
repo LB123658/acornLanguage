@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='icon' href='images/favicon.png' type='image/png'/ >  
+<title id="myTitle">Learn Acorn</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap" rel="stylesheet">
+<style>
+* {
+font-family: 'Fira Mono', monospace;
+}
+#img {
+position: absolute;
+top: 0px;
+left: 5px;
+width: 90px;
+}
+#title {
+font-family: 'Fira Mono', monospace;
+color: white;
+font-size: 30px;
+position: absolute;
+top: 10px;
+left: 120px;
+cursor: default;
+width: 70%;
+}
+#nav {
+position: fixed;
+top: 0px;
+height: 120px;
+width: 100%;
+left: 0px;
+background: #58bd00;
+z-index: 1;
+}
+#tryIt {
+position: fixed; 
+top: 35px;
+right: 20px;
+height: 50px;
+width: 100px;
+border: white;
+border-radius: 25px;
+border: 2px solid white;
+color: white;
+background: transparent;
+font-size: 15px;
+cursor: pointer;
+z-index: 2;
+}
+#tryIt:hover {
+color: #58bd00;
+background: white;
+animation-name: example;
+  animation-duration: 0.9s;
+  animation-iteration-count: 1;
+}
+@keyframes example {
+ 
+  0% {background: transparent;}
+  100%   {background: white;}
+
+}
+#paragraph {
+position: absolute;
+top: 150px;
+left: 25%; 
+width: 50%;
+text-align: justify;
+font-size: 20px;
+color: grey;
+}
+#span:hover {
+background: yellow;
+cursor: help;
+}
+a {
+color: grey;
+text-decoration: none;
+}
+a:hover {
+color: #58bd00;
+}
+</style>
+<body>
+<div id="nav">
+  <a href="index.html">
+    <img src="https://lb123658.github.io/acornLanguage/images/favicon.png" id="img" /></a>
+<p id="title"><b>Acorn</b>, the new code to make designs.
+</div>
+<a href="editor.html">
+<button id="tryIt" title="Try the Acorn compiler">Try Acorn</button></a>
+<p id="paragraph">Learning Acorn:<br><br>Acorn is designed to be very easy to learn.<br><br>
+All you have to do is put the colors of the squares you want in the code. The code has "pixel1" throught "pixel16" in a grid of 16 squares. The top four are 1 through 4, and they increase from there, left to right.<br><br>Part of the code:<br><br>file.acorn {<span id="span" title="This is the title of the project">Example code</span>}<br>
+program::drawing<br>
+pixel1 == green<br>pixel2 == blue<br>pixel3 == orange<br>pixel4 == purple<br>
+end program::<br><br>The code above only has four color squares, making a horizontal line that is (left to right) green, blue, orange, and then purple. You can use color names, as well as the nexadecimal codes for these as well.<br><br><a href="examples/example.html">Check out how this code actually looks</a></p>
+</body>
+</html>
