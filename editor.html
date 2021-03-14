@@ -168,6 +168,7 @@ border-radius: 5px;
 background: grey;
 color: white;
 text-align: left;
+cursor: pointer;  
 }
 #thirdFile {
 position: absolute;
@@ -180,6 +181,7 @@ border-radius: 5px;
 background: grey;
 color: white;
 text-align: left;
+cursor: pointer;    
 }
 .userInput {
 background: black;
@@ -363,8 +365,8 @@ color: #fff000;
 position: absolute;
 width: 90%;
 left: 5%;
-font-family: courier new;
-font-size: 10px;
+font-family: 'Fira Mono', monospace;
+font-size: 13px;
 }
 </style>
 </head>
@@ -439,9 +441,9 @@ end program::
 <input class="userInput" id="pixel16" onkeyup="sixteenColor()">
 
 
-<button id="topFile">▸ Files</button>
-<button id="secondFile" onclick="hideHtml()">file.acorn</button>
-<button id="thirdFile" onclick="generateHtml(); writeIt()">file.html</button>
+<button id="topFile" title="View files in this project">▸ Files</button>
+<button id="secondFile" onclick="hideHtml()" title="File with your Acorn code">file.acorn</button>
+<button id="thirdFile" onclick="generateHtml(); writeIt()" title="File with generated HTML">file.html</button>
 
 
 <p id="acornLogo">Acorn code editor</p>
